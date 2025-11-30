@@ -16,3 +16,9 @@
 --   2. Sort the results alphabetically by LastName (ascending).
 --   3. Limit the output to the first 10 rows.
 --
+
+SELECT TOP 10 
+       CONCAT(FirstName, ' ', LastName) AS FullName,
+       Country
+FROM Customer
+ORDER BY LastName ASC;
