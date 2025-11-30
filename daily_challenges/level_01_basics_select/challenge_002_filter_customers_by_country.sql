@@ -16,3 +16,7 @@
 --   2. Filter the results to include ONLY customers from 'USA'.
 --   3. Order the results alphabetically by LastName.
 --
+SELECT CONCAT(FirstName, ' ', LastName) AS FullName, Country
+FROM Customer
+WHERE Country = 'USA'
+ORDER BY LastName ASC;
