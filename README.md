@@ -1,4 +1,14 @@
 # SQL-Chinook-Lab
+![T-SQL](https://img.shields.io/badge/T--SQL-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
+![SQL Lab](https://img.shields.io/badge/Structured-SQL_Lab-0A66C2?style=for-the-badge)
+![Daily Challenges](https://img.shields.io/badge/Practice-Daily_Challenges-F39C12?style=for-the-badge)
+![Chinook DB](https://img.shields.io/badge/Database-Chinook-8E44AD?style=for-the-badge)
+![Progressive Levels](https://img.shields.io/badge/Architecture-Progressive_Levels-9cf?style=for-the-badge)
+![Last Commit](https://img.shields.io/github/last-commit/danij4ne/SQL-Chinook-Lab?style=for-the-badge)
+![Commit Activity](https://img.shields.io/github/commit-activity/m/danij4ne/SQL-Chinook-Lab?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-27AE60?style=for-the-badge)
+
+
 
 The SQL-Chinook-Lab is a structured collection of daily SQL challenges and analytical mini-projects based on the open-source Chinook database.
 The repository is organized into progressive modules covering essential and advanced SQL topics, ranging from basic queries to multi-step analytical workflows.
