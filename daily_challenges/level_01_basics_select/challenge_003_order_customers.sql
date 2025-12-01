@@ -16,3 +16,11 @@
 --   2. Return two different orderings in separate queries:
 --        a) Sort customers by Country (ascending).
 --        b) Sort customers by LastName (descending).
+
+SELECT FirstName , LastName , Country
+FROM Customer
+ORDER BY Country ASC ;
+
+SELECT FirstName , LastName , Country
+FROM Customer
+ORDER BY LastName DESC ;
