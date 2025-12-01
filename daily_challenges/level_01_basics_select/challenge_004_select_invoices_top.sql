@@ -15,3 +15,7 @@
 --        - Total
 --   2. Sort the invoices by Total in descending order.
 --   3. Return only the top 5 highest invoices.
+
+SELECT TOP 5 InvoiceId , CustomerId , Total
+FROM invoice 
+ORDER BY Total DESC
