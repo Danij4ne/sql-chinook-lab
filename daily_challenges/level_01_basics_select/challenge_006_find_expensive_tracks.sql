@@ -15,3 +15,8 @@
 --        - UnitPrice
 --   2. Return only tracks where UnitPrice is greater than 0.99.
 --   3. Order the results by UnitPrice in descending order.
+
+SELECT name , composer , unitprice
+FROM Track 
+WHERE unitprice > 0.99
+ORDER BY UnitPrice DESC
