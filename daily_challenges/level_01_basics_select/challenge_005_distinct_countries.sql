@@ -12,3 +12,7 @@
 --   1. Select the Country column from the Customer table.
 --   2. Return only unique country names (no duplicates).
 --   3. Sort the countries alphabetically.
+
+SELECT DISTINCT Country
+FROM Customer
+ORDER BY Country ASC
