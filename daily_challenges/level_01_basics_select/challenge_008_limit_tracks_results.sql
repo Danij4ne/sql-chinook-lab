@@ -15,3 +15,7 @@
 --        - UnitPrice
 --   2. Sort the results alphabetically by Name.
 --   3. Return only the first 20 rows.
+
+SELECT TOP 20 trackid , name , unitprice 
+FROM  track
+ORDER BY name ASC
