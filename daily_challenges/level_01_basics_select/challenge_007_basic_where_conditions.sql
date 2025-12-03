@@ -17,3 +17,8 @@
 --        a) Milliseconds is greater than 250000
 --        b) Bytes is greater than 5000000
 --   3. Sort the results by Milliseconds in descending order.
+
+SELECT name , milliseconds , bytes
+FROM track
+WHERE milliseconds > 250000 and bytes > 5000000
+ORDER BY milliseconds DESC
