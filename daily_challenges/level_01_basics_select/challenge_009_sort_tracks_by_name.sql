@@ -14,3 +14,7 @@
 --        - Name
 --   2. Sort the results alphabetically by Name (ascending).
 --   3. Return the full list without limiting rows.
+
+SELECT trackid , name
+FROM track
+ORDER BY name ASC
