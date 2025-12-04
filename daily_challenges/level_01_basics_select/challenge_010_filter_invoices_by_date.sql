@@ -16,3 +16,8 @@
 --        - Total
 --   2. Return only invoices with InvoiceDate greater than '2010-01-01'.
 --   3. Sort the results by InvoiceDate in ascending order.
+
+SELECT invoiceid , customerid , invoicedate , total 
+FROM invoice 
+WHERE invoicedate > '2010-01-01'
+ORDER BY invoicedate ASC
