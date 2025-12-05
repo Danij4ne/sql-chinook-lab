@@ -15,3 +15,9 @@
 --        - UnitPrice
 --   2. Return only tracks where Bytes is greater than 7,000,000.
 --   3. Sort the results by Bytes in descending order.
+
+SELECT Name, Bytes, UnitPrice
+FROM Track
+WHERE Bytes > 7000000
+ORDER BY Bytes DESC;
+
