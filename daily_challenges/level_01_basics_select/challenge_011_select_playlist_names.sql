@@ -13,3 +13,7 @@
 --        - PlaylistId
 --        - Name
 --   2. Sort the results alphabetically by Name.
+
+SELECT playlistid , name 
+FROM playlist 
+ORDER BY name ;
