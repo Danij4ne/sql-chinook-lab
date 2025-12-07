@@ -16,3 +16,8 @@
 --   2. Return only tracks where the Name contains the word 'Love'.
 --        Example pattern: '%Love%'
 --   3. Sort the results alphabetically by Name.
+
+SELECT trackid , name , composer 
+FROM track 
+WHERE name LIKE '%Love%'
+ORDER BY name ASC ;
