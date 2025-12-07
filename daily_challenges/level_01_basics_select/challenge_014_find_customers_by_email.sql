@@ -16,3 +16,9 @@
 --   2. Return only customers whose Email ends with '.com'.
 --        Example pattern: '%.com'
 --   3. Sort the results alphabetically by LastName.
+
+SELECT firstname , lastname , email 
+FROM customer 
+WHERE email LIKE '%.com'
+ORDER BY lastname ASC ;
+
