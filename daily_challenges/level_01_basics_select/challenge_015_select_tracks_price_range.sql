@@ -15,3 +15,8 @@
 --        - UnitPrice
 --   2. Return only tracks where UnitPrice is between 0.50 and 1.00.
 --   3. Sort the results by UnitPrice in ascending order.
+
+SELECT trackid , name , unitprice 
+FROM track 
+WHERE unitprice between 0.50 and 1.00 
+ORDER BY unitprice ASC 
