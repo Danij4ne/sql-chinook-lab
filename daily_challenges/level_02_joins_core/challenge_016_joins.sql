@@ -16,3 +16,11 @@
 --        - Invoice.Total
 --   2. Use an INNER JOIN between Customer and Invoice on CustomerId.
 --   3. Sort the results alphabetically by LastName.
+
+SELECT c.firstname , c.lastname , i.invoiceid , i.total
+FROM  customer c
+INNER JOIN invoice i
+ON c.customerid = i.customerid 
+ORDER BY  c.lastname ASC 
+
+
