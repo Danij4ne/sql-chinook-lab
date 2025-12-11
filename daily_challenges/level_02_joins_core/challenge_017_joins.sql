@@ -15,3 +15,9 @@
 --        - Album.Title AS AlbumTitle
 --   2. Use an INNER JOIN between Track and Album on AlbumId.
 --   3. Sort the results alphabetically by TrackName.
+
+SELECT t.trackid , t.name AS TrackName , a.title AS AlbumTitle
+FROM track t
+INNER JOIN album a
+ON t.albumid = a.albumid
+ORDER BY TrackName ASC
