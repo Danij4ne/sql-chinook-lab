@@ -17,3 +17,15 @@
 --        - Customer.LastName
 --   2. Join Invoice → Customer using CustomerId.
 --   3. Sort the results by InvoiceDate in descending order.
+
+SELECT
+    i.invoiceid,
+    i.invoicedate,
+    i.total,
+    c.firstname,
+    c.lastname
+FROM invoice i
+JOIN customer c
+    ON i.customerid = c.customerid
+ORDER BY i.invoicedate DESC;
+
