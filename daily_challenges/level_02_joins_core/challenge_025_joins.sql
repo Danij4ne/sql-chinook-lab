@@ -15,3 +15,13 @@
 --        - Artist.Name AS ArtistName
 --   2. Join Album → Artist using ArtistId.
 --   3. Sort the results alphabetically by ArtistName.
+
+SELECT
+    a.AlbumId,
+    a.Title AS AlbumTitle,
+    ar.Name AS ArtistName
+FROM Album a
+INNER JOIN Artist ar
+    ON a.ArtistId = ar.ArtistId
+ORDER BY
+    ArtistName;
