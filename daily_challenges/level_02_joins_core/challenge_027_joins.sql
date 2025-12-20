@@ -18,3 +18,16 @@
 --   2. Self join Employee AS E → Employee AS M using:
 --        E.ReportsTo = M.EmployeeId
 --   3. Sort the results by ManagerLastName, then EmployeeLastName.
+
+SELECT
+    E.EmployeeId,
+    E.FirstName AS EmployeeFirstName,
+    E.LastName AS EmployeeLastName,
+    M.FirstName AS ManagerFirstName,
+    M.LastName AS ManagerLastName
+FROM Employee AS E
+JOIN Employee AS M
+    ON E.ReportsTo = M.EmployeeId
+ORDER BY
+    ManagerLastName,
+    EmployeeLastName;
