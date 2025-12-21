@@ -17,3 +17,16 @@
 --        - Employee.LastName AS RepLastName
 --   2. Join Customer → Employee using SupportRepId = EmployeeId.
 --   3. Sort the results by RepLastName, then CustomerLastName.
+
+SELECT
+    c.CustomerId,
+    c.FirstName AS CustomerFirstName,
+    c.LastName AS CustomerLastName,
+    e.FirstName AS RepFirstName,
+    e.LastName AS RepLastName
+FROM Customer c
+INNER JOIN Employee e
+    ON c.SupportRepId = e.EmployeeId
+ORDER BY
+    e.LastName,
+    c.LastName;
