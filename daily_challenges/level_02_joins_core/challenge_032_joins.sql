@@ -16,3 +16,16 @@
 --   3. Join Album → Track using AlbumId.
 --   4. Group the results by ArtistName.
 --   5. Sort the results by TrackCount in descending order.
+
+SELECT
+    ar.Name AS ArtistName,
+    COUNT(t.TrackId) AS TrackCount
+FROM Artist ar
+INNER JOIN Album al
+    ON ar.ArtistId = al.ArtistId
+INNER JOIN Track t
+    ON al.AlbumId = t.AlbumId
+GROUP BY
+    ar.Name
+ORDER BY
+    TrackCount DESC;
