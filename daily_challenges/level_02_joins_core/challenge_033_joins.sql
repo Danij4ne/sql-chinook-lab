@@ -16,3 +16,16 @@
 --   2. Join Customer → Invoice using CustomerId.
 --   3. Group the results by Customer.FirstName and Customer.LastName.
 --   4. Sort the results by TotalSpent in descending order.
+
+SELECT
+    ar.Name AS ArtistName,
+    COUNT(t.TrackId) AS TrackCount
+FROM Artist ar
+INNER JOIN Album al
+    ON ar.ArtistId = al.ArtistId
+INNER JOIN Track t
+    ON al.AlbumId = t.AlbumId
+GROUP BY
+    ar.Name
+ORDER BY
+    TrackCount DESC;
