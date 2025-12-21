@@ -15,3 +15,14 @@
 --   2. Join Track → Genre using GenreId.
 --   3. Group results by GenreName.
 --   4. Sort the results by TrackCount in descending order.
+
+SELECT
+    g.Name AS GenreName,
+    COUNT(t.TrackId) AS TrackCount
+FROM Track t
+INNER JOIN Genre g
+    ON t.GenreId = g.GenreId
+GROUP BY
+    g.Name
+ORDER BY
+    TrackCount DESC;
