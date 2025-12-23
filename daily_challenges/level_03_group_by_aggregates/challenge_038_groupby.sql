@@ -14,3 +14,12 @@
 --        - SUM(Invoice.Total) AS TotalSales
 --   2. Group results by Invoice.BillingCountry.
 --   3. Sort the results by TotalSales in descending order.
+
+SELECT
+    Invoice.BillingCountry,
+    SUM(Invoice.Total) AS TotalSales
+FROM Invoice
+GROUP BY
+    Invoice.BillingCountry
+ORDER BY
+    TotalSales DESC;
