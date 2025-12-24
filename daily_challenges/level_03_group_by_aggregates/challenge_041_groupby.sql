@@ -16,3 +16,17 @@
 --   2. Join Album → Track using AlbumId.
 --   3. Group results by Album.AlbumId and Album.Title.
 --   4. Sort results by TotalDurationMs in descending order.
+
+SELECT
+    a.AlbumId,
+    a.Title,
+    SUM(t.Milliseconds) AS TotalDurationMs
+FROM Album a
+JOIN Track t
+    ON a.AlbumId = t.AlbumId
+GROUP BY
+    a.AlbumId,
+    a.Title
+ORDER BY
+    TotalDurationMs DESC;
+
