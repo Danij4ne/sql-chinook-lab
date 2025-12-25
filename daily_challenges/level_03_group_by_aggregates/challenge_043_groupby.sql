@@ -15,3 +15,12 @@
 --   2. From the Customer table.
 --   3. Group results by Country.
 --   4. Sort results by CustomerCount in descending order.
+
+SELECT
+    Country,
+    COUNT(CustomerId) AS CustomerCount
+FROM Customer
+GROUP BY
+    Country
+ORDER BY
+    CustomerCount DESC;
