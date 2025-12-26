@@ -15,3 +15,10 @@
 --   2. From the InvoiceLine table.
 --   3. Group results by InvoiceId.
 --   4. Sort results by LineCount in descending order.
+
+SELECT
+    il.InvoiceId,
+    COUNT(il.InvoiceLineId) AS LineCount
+FROM InvoiceLine il
+GROUP BY il.InvoiceId
+ORDER BY LineCount DESC;
