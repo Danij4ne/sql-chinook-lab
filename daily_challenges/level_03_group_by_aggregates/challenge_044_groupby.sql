@@ -15,3 +15,12 @@
 --   2. From the Invoice table.
 --   3. Group results by BillingCountry.
 --   4. Sort results by AvgInvoiceTotal in descending order.
+
+SELECT 
+    i.BillingCountry,
+    AVG(i.Total) AS AvgInvoiceTotal
+FROM Invoice i
+GROUP BY i.BillingCountry
+ORDER BY AvgInvoiceTotal DESC;
+
+
