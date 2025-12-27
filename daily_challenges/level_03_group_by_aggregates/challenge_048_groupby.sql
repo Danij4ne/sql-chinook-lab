@@ -15,3 +15,12 @@
 --   2. Join Customer → Invoice using CustomerId.
 --   3. Group results by Customer.City.
 --   4. Sort results by TotalSales in descending order.
+
+SELECT
+    c.City,
+    SUM(i.Total) AS TotalSales
+FROM Customer c
+JOIN Invoice i
+    ON c.CustomerId = i.CustomerId
+GROUP BY c.City
+ORDER BY TotalSales DESC;
