@@ -15,3 +15,12 @@
 --   2. Join Track → Genre using GenreId.
 --   3. Group results by GenreName.
 --   4. Sort results by AvgDurationMs in descending order.
+
+SELECT 
+    g.Name AS GenreName,
+    AVG(t.Milliseconds) AS AvgDurationMs
+FROM Track t
+JOIN Genre g 
+    ON t.GenreId = g.GenreId
+GROUP BY g.Name
+ORDER BY AvgDurationMs DESC;
