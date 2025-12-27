@@ -15,3 +15,12 @@
 --   2. Join Track → MediaType using MediaTypeId.
 --   3. Group results by MediaTypeName.
 --   4. Sort results by TrackCount in descending order.
+
+SELECT
+    m.Name AS MediaTypeName,
+    COUNT(t.TrackId) AS TrackCount
+FROM Track t
+JOIN MediaType m
+    ON t.MediaTypeId = m.MediaTypeId
+GROUP BY m.Name
+ORDER BY TrackCount DESC;
