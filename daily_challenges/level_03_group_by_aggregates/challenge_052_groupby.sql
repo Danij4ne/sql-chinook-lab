@@ -15,3 +15,10 @@
 --   2. From the Invoice table.
 --   3. Group results by MONTH(Invoice.InvoiceDate).
 --   4. Sort results by InvoiceMonth in ascending order.
+
+SELECT
+    MONTH(InvoiceDate) AS InvoiceMonth,
+    SUM(Total) AS TotalSales
+FROM Invoice
+GROUP BY MONTH(InvoiceDate)
+ORDER BY InvoiceMonth ASC;
