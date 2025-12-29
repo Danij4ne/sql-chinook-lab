@@ -15,3 +15,12 @@
 --   2. Join Artist → Album using ArtistId.
 --   3. Group results by ArtistName.
 --   4. Sort results by AlbumCount in descending order.
+
+SELECT 
+    Artist.Name AS ArtistName,
+    COUNT(Album.AlbumId) AS AlbumCount
+FROM Artist
+JOIN Album 
+    ON Artist.ArtistId = Album.ArtistId
+GROUP BY Artist.Name
+ORDER BY AlbumCount DESC;
