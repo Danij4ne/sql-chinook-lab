@@ -15,3 +15,12 @@
 --   2. Join Album → Track using AlbumId.
 --   3. Group results by AlbumTitle.
 --   4. Sort results by AvgTrackPrice in descending order.
+
+SELECT
+    Album.Title AS AlbumTitle,
+    AVG(Track.UnitPrice) AS AvgTrackPrice
+FROM Album
+JOIN Track
+    ON Album.AlbumId = Track.AlbumId
+GROUP BY Album.Title
+ORDER BY AvgTrackPrice DESC;
