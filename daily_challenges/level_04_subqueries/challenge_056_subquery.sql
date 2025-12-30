@@ -18,3 +18,12 @@
 --        - Calculate the SUM(Invoice.Total) per customer.
 --        - Filter customers whose total spending is greater than 100.
 --   4. Sort the results by LastName in ascending order.
+
+SELECT c.CustomerId , c.FirstName , c.LastName
+FROM customer c
+WHERE 100 < (
+    SELECT SUM(i.Total)
+    FROM invoice i
+    WHERE i.Customerid = c.Customerid
+)
+ORDER BY c.LastName ASC
