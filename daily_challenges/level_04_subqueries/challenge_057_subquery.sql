@@ -16,3 +16,11 @@
 --   2. Use a subquery to calculate the average UnitPrice of all tracks.
 --   3. Return only tracks where UnitPrice is greater than this average.
 --   4. Sort the results by UnitPrice in descending order.
+
+SELECT TrackId , Name , UnitPrice
+FROM Track
+WHERE UnitPrice > (
+    SELECT AVG(UnitPrice)
+    FROM Track
+)
+ORDER BY UnitPrice DESC;
