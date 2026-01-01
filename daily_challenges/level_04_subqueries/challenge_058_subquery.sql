@@ -17,3 +17,12 @@
 --        - Select the CustomerId values that appear in invoices.
 --   3. Filter customers whose CustomerId is IN that subquery.
 --   4. Sort the results by LastName in ascending order.
+
+
+SELECT CustomerId , FirstName , LastName
+FROM Customer c
+WHERE CustomerId IN (
+    SELECT CustomerId
+    FROM invoice i
+)
+ORDER BY LastName ASC
