@@ -16,3 +16,11 @@
 --        - Select all TrackId values that appear in InvoiceLine.
 --   3. Return only tracks whose TrackId is NOT IN that subquery.
 --   4. Sort the results alphabetically by Name.
+
+SELECT TrackId , Name
+FROM track
+WHERE TrackId NOT IN (
+    SELECT TrackId
+    FROM InvoiceLine
+)
+ORDER BY Name
