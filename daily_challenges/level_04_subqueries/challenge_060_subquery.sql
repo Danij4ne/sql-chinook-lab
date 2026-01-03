@@ -19,3 +19,28 @@
 --        - Calculate the average total spending across all customers.
 --   4. Return only customers whose total spending is greater than this global average.
 --   5. Sort results by LastName in ascending order.
+
+SELECT
+    c.CustomerId,
+    c.FirstName,
+    c.LastName
+FROM Customer c
+WHERE
+ 
+    (
+        SELECT SUM(i.Total)
+        FROM Invoice i
+        WHERE i.CustomerId = c.CustomerId
+    )
+    >
+ 
+    (
+        SELECT AVG(customer_total)
+        FROM (
+            SELECT SUM(i2.Total) AS customer_total
+            FROM Invoice i2
+            GROUP BY i2.CustomerId
+        ) t
+    )
+ORDER BY c.LastName ASC;
+
