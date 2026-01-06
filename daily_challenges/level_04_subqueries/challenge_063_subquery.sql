@@ -20,3 +20,14 @@
 --        - Country
 --   4. Return only customers whose Country is IN the result of the subquery.
 --   5. Sort results by Country, then LastName.
+
+
+SELECT FirstName, LastName, Country
+FROM Customer
+WHERE Country IN (
+    SELECT BillingCountry
+    FROM Invoice
+    GROUP BY BillingCountry
+    HAVING SUM(Total) > 200
+)
+ORDER BY Country, LastName;
