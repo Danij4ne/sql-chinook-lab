@@ -16,3 +16,14 @@
 --   2. Use a subquery to compute the average Total across all invoices.
 --   3. Return only invoices where Total is greater than this average.
 --   4. Sort results by Total in descending order.
+
+SELECT 
+    InvoiceId,
+    InvoiceDate,
+    Total
+FROM Invoice
+WHERE Total > (
+    SELECT AVG(Total)
+    FROM Invoice
+)
+ORDER BY Total DESC;
