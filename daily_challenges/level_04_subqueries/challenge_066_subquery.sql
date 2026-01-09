@@ -17,3 +17,16 @@
 --        - Checks whether the artist has any track where Genre.Name = 'Rock'.
 --   4. Return only artists where such a track does NOT exist.
 --   5. Sort results alphabetically by ArtistName.
+
+SELECT
+    a.Name AS ArtistName
+FROM Artist a
+WHERE NOT EXISTS (
+    SELECT 1
+    FROM Album al
+    JOIN Track t   ON t.AlbumId  = al.AlbumId
+    JOIN Genre g   ON g.GenreId  = t.GenreId
+    WHERE al.ArtistId = a.ArtistId
+      AND g.Name = 'Rock'
+)
+ORDER BY ArtistName;
