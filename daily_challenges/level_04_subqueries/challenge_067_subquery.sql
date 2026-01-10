@@ -19,3 +19,23 @@
 --   4. Compare each customer's invoice count against the reference customer's count.
 --   5. Return only customers who have a higher invoice count than the reference.
 --   6. Sort results by CustomerId.
+
+-- Customers with more invoices than reference customer (example: CustomerId = 5)
+
+SELECT
+    c.CustomerId,
+    c.FirstName,
+    c.LastName
+FROM Customer c
+JOIN Invoice i
+    ON i.CustomerId = c.CustomerId
+GROUP BY
+    c.CustomerId, c.FirstName, c.LastName
+HAVING COUNT(*) > (
+    SELECT COUNT(*)
+    FROM Invoice
+    WHERE CustomerId = 5
+)
+ORDER BY c.CustomerId;
+
+
