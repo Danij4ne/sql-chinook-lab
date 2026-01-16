@@ -1,4 +1,13 @@
 # SQL-Chinook-Lab
+
+<p align="center">
+  <img 
+    src="https://github.com/user-attachments/assets/0f1937a5-9b03-4f42-818e-29efe670c86f"
+    alt="Chinook SQL Lab"
+    style="max-width: 100%; height: auto;"
+  />
+</p>
+
 ![T-SQL](https://img.shields.io/badge/T--SQL-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
 ![SQL Lab](https://img.shields.io/badge/Structured-SQL_Lab-0A66C2?style=for-the-badge)
 ![Daily Challenges](https://img.shields.io/badge/Practice-Daily_Challenges-F39C12?style=for-the-badge)
