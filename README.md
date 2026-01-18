@@ -1,9 +1,10 @@
 # SQL-Chinook-Lab
 
+
 <p align="center">
   <img 
-    src="https://github.com/user-attachments/assets/0f1937a5-9b03-4f42-818e-29efe670c86f"
-    alt="Chinook SQL Lab"
+    src="https://github.com/user-attachments/assets/49548deb-a0d6-4112-aaf7-b0a689352333"
+    alt="Chinook"
     style="max-width: 100%; height: auto;"
   />
 </p>
