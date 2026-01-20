@@ -11,3 +11,11 @@
 --   1. Select InvoiceId, InvoiceDate, Total.
 --   2. Use SUM(Total) OVER (ORDER BY InvoiceDate) AS RunningTotal.
 --   3. Order final results by InvoiceDate.
+
+SELECT
+    InvoiceId,
+    InvoiceDate,
+    Total,
+    SUM(Total) OVER (ORDER BY InvoiceDate) AS RunningTotal
+FROM Invoice
+ORDER BY InvoiceDate;
