@@ -11,3 +11,10 @@
 --   1. Select InvoiceId, InvoiceDate, Total.
 --   2. Use LAG(Total) OVER (ORDER BY InvoiceDate) AS PreviousTotal.
 --   3. Order results by InvoiceDate.
+
+
+SELECT InvoiceId , InvoiceDate , Total ,
+LAG(Total) OVER (ORDER BY InvoiceDate) AS PreviousTotal
+FROM Invoice 
+Order by InvoiceDate 
+
