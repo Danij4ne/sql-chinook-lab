@@ -11,3 +11,9 @@
 --   1. Select InvoiceId, InvoiceDate, Total.
 --   2. Use LEAD(Total) OVER (ORDER BY InvoiceDate) AS NextTotal.
 --   3. Order results by InvoiceDate.
+
+SELECT InvoiceId , InvoiceDate , Total  , 
+LEAD(Total) OVER (ORDER BY InvoiceDate) AS NextTotal
+FROM Invoice 
+ORDER BY InvoiceDate
+
