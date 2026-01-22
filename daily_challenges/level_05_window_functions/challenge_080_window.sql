@@ -11,3 +11,17 @@
 --   1. Select InvoiceId, BillingCountry, Total.
 --   2. Use RANK() OVER (PARTITION BY BillingCountry ORDER BY Total DESC).
 --   3. Order results by BillingCountry, then Rank.
+
+
+SELECT
+    InvoiceId,
+    BillingCountry,
+    Total,
+    RANK() OVER (
+        PARTITION BY BillingCountry
+        ORDER BY Total DESC
+    ) AS SalesRank
+FROM Invoice
+ORDER BY BillingCountry, SalesRank;
+
+
