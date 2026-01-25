@@ -26,4 +26,4 @@ WHERE 100 < (
     FROM invoice i
     WHERE i.Customerid = c.Customerid
 )
-ORDER BY c.LastName ASC
+ORDER BY c.LastName ASC ;

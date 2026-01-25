@@ -25,4 +25,4 @@ WHERE CustomerId IN (
     SELECT CustomerId
     FROM invoice i
 )
-ORDER BY LastName ASC
+ORDER BY LastName ASC ;

@@ -26,5 +26,5 @@ WITH total_sum AS (
 ) 
 SELECT CustomerId , TotalSpent 
 FROM total_sum 
-ORDER BY TotalSpent DESC 
+ORDER BY TotalSpent DESC ;
 

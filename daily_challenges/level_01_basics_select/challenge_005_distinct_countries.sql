@@ -15,4 +15,4 @@
 
 SELECT DISTINCT Country
 FROM Customer
-ORDER BY Country ASC
+ORDER BY Country ASC ;

@@ -23,4 +23,4 @@ WHERE TrackId NOT IN (
     SELECT TrackId
     FROM InvoiceLine
 )
-ORDER BY Name
+ORDER BY Name ;
