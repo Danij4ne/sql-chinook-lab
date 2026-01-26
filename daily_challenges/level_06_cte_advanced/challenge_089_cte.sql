@@ -13,3 +13,19 @@
 --        - In each step, adds 1 to the previous value.
 --        - Stops at 10.
 --   2. In the main query, select the generated numbers.
+
+WITH numbers AS (
+    -- Anchor member
+    SELECT 1 AS num
+
+    UNION ALL
+
+    -- Recursive member
+    SELECT num + 1
+    FROM numbers
+    WHERE num < 10
+)
+SELECT
+    num
+FROM numbers
+OPTION (MAXRECURSION 100);
