@@ -1,0 +1,23 @@
+
+/*
+CHALLENGE 003 — Order Customers
+
+Goal:
+Return all customers ordered by name.
+
+Instructions:
+1) Query the table: customer
+2) Select exactly these columns (in this order):
+   - customer_id
+   - first_name
+   - last_name
+   - country
+3) Sort the result by:
+   - last_name ASC
+   - first_name ASC
+
+Expected:
+A result set with 4 columns:
+customer_id, first_name, last_name, country
+Ordered by last_name ASC and first_name ASC.
+*/
