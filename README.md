@@ -1,5 +1,24 @@
 # SQL-Chinook-Lab
 
+<p align="center">
+  <img 
+    src="https://github.com/user-attachments/assets/f546b00d-80d1-4fcb-8be7-8b32de5b62b6"
+    alt="sql-chinook-kab"
+    style="max-width: 100%; height: auto;"
+  />
+</p>
+
+![T-SQL](https://img.shields.io/badge/T--SQL-CC2927?style=flat&logo=microsoftsqlserver&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-3366CC?style=flat&logo=postgresql&logoColor=white)
+![SQL Lab](https://img.shields.io/badge/Structured-SQL_Lab-0A66C2?style=flat)
+![Daily Challenges](https://img.shields.io/badge/Practice-Daily_Challenges-F39C12?style=flat)
+![Chinook DB](https://img.shields.io/badge/Database-Chinook-8E44AD?style=flat)
+![Progressive Levels](https://img.shields.io/badge/Architecture-Progressive_Levels-9cf?style=flat)
+![License](https://img.shields.io/badge/License-MIT-27AE60?style=flat)
+
+ 
+
+
 ## 1. Overview
 
 A structured collection of SQL challenges and analytical mini-projects based on the Chinook sample database. The repository mirrors the same progression across **PostgreSQL** and **SQL Server**, with each challenge packaged as a small, self-contained unit.
@@ -119,4 +138,5 @@ All SQL challenges, solutions, structure, and analytical workflows contained her
 ## Author
 
 **Daniel Jane Garcia**
+
 GitHub: danij4ne
